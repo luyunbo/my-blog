@@ -1,0 +1,20 @@
+layout: post
+date: 2016/05/16
+title: 向php数组添加元素
+categories: [PHP]
+tags: [PHP]
+---
+
+目前看到用的比较多的是两种方法，分别是
+```php
+$arr = array();
+
+// 第一种
+array_push($arr, 'test');
+
+// 第二种
+$arr[] = 'test';
+```
+两者基本等效。
+如果用 array_push() 来给数组增加一个单元，还不如用 $array[] = ，因为这样没有调用函数的额外负担。
+如果第一个参数不是数组，array_push() 将发出一条警告。这和 $var[] 的行为不同，后者会新建一个数组。
