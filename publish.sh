@@ -56,29 +56,19 @@ fi
 
 sed "1s/#/title:/g" ${post} > ${post_public} 
 
-sed -i '1a\
----
-'  ${post_public}
+sed -i '1a ---'  ${post_public}
 
 if [ -n "${tags}" ];then
-    sed -i '1a\
-        tags: ['${tags}']
-    ' ${post_public}
+    sed -i '1a tags: ['${tags}']' ${post_public}
 fi
     
 if [ -n "${categories}" ];then
-    sed -i '1a\
-        categories: ['${categories}']
-    ' ${post_public}
+    sed -i '1a categories: ['${categories}']' ${post_public}
 fi
 
-sed -i '1a\
-date:'${create_time}'
-' ${post_public}
+sed -i '1a date:'${create_time}'' ${post_public}
 
-sed -i '1i\
----
-' ${post_public}
+sed -i '1i ---' ${post_public}
 
 scp ${post_public} luyunbo.me:/var/www/luyunbo.me/blog/source/_posts/
 
