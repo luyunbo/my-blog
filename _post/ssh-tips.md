@@ -1,8 +1,8 @@
 ---
 title: SSH Tips
 date:
-        categories: [tech]
-        tags: [linux,ssh]
+categories: [tech]
+tags: [linux,ssh]
 ---
 
 原文：[SSH Can Do That? Productivity Tips for Working with Remote Servers](http://blogs.perl.org/users/smylers/2011/08/ssh-productivity-tips.html) / 作者：[Smylers](http://blogs.perl.org/users/smylers/) 
